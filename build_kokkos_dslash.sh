@@ -25,6 +25,6 @@ CXX="${PK_CXX}" CC="${PK_CC}" CXXFLAGS="${PK_CXXFLAGS}" cmake \
     -DMG_USE_AVX512=OFF \
     -DMG_USE_AVX2=ON \
     -DCMAKE_BUILD_TYPE=DEBUG \
-     ${SRCDIR}/KokkosDSlash
+     ${SRCDIR}/KokkosDslash
 
 ${MAKE}
