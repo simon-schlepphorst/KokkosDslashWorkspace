@@ -43,10 +43,10 @@ modules, and set compiler / linker variables. In addition the file
 specifies locations of the source, build and install directories. 
 To adapt to a new system typically the following would need to be set:
 
-*) `PK_CXX` - the C++ compiler
-*) `PK_CC`  - the C compiler
-*) `PK_CXXFLAGS` and `PK_CFLAGS` -- compiler flags
-*) `PK_LDFLAGS` and `PK_LIBS` -- linker flags
+* `PK_CXX` - the C++ compiler
+* `PK_CC`  - the C compiler
+* `PK_CXXFLAGS` and `PK_CFLAGS` -- compiler flags
+* `PK_LDFLAGS` and `PK_LIBS` -- linker flags
 
 QDP++ (`qdpxx`) and the reference `cpp_wilson_dslash` packages
 can be built with OpenMP threading. In order to use this feature
@@ -61,7 +61,12 @@ The `build_xxxx.sh` files will build either `KokkosDslash` or its dependencies.
 These files typically perform configuration by invoking `configure` (for 
 `libxml2`, QDP++ (`qdpxx`) or CMake for `KokkosDslash`. Custom options can 
 be set here, e.g. for the Kokkos to be built for CUDA etc, or for qdpxx
-to use an installed libxml.
+to use an installed libxml. There are some `build_kokkos_dslash.sh` script examples
+for OpenMP builds in:
+
+* `build_kokkos_dslash_knl_omp.sh` -- KNL build with Kokkos using OpenMP and specialized AVX512
+* `build_kokkos_dslash_snb_omp.sh` -- CPU build (SandyBridge) using AVX2
+* FIXME: add a GPU build example
 
 Running The Mini-App:
 =====================
