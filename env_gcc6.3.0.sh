@@ -17,7 +17,6 @@ PK_CFLAGS="-g -O3 -std=gnu99 -fopenmp"
 PK_LDFLAGS=""
 PK_LIBS=""
 
-OMPENABLE=""
 MAKE="make -j 8"
 
 
