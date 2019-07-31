@@ -8,4 +8,4 @@
 	branch = devel
 [submodule "src/KokkosDslash"]
 	path = src/KokkosDslash
-	url = ./KokkosDslash.git
+	url = ../bjoo/KokkosDslash.git
