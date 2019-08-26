@@ -1,4 +1,4 @@
-./build_libxml2.sh
+#./build_libxml2.sh
 ./build_qdp++-scalar.sh
-./build_cpp_wilson_dslash.sh
+#./build_cpp_wilson_dslash.sh
 ./build_kokkos_dslash_snb_avx2.sh 

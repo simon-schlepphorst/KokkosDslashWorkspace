@@ -29,7 +29,7 @@ ${SRCDIR}/qdpxx/configure \
 	--enable-largefile \
 	--enable-parallel-io \
         --enable-dml-output-buffering \
-	--with-libxml2="${INSTALLDIR}/libxml2" \
+	--with-libxml2=/usr \
 	CXXFLAGS="${PK_CXXFLAGS}" \
 	CFLAGS="${PK_CFLAGS}" \
 	CXX="${PK_CXX}" \
