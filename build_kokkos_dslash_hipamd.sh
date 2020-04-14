@@ -20,7 +20,6 @@ cd ./build_${PK_MODULE}
 
 
 cmake3 \
-    -G"Eclipse CDT4 - Unix Makefiles" \
     -DCMAKE_CXX_COMPILER=hipcc \
     -DKokkos_ENABLE_OPENMP=FALSE \
     -DKokkos_ENABLE_HIP=TRUE \
@@ -34,14 +33,13 @@ cmake3 \
     -DCMAKE_ECLIPSE_VERSION=4.5.0 \
     -DQDPXX_DIR=${INSTALLDIR}/qdp++-scalar/share \
     -DMG_DEFAULT_LOGLEVEL=DEBUG \
-    -DCMAKE_CXX_FLAGS="${PK_CXXFLAGS_NVCC}" \
-    -DCMAKE_EXE_LINKER_FLAGS="${PK_LDFLAGS}" \
     -DMG_FLAT_PARALLEL_DSLASH=ON \
     -DMG_KOKKOS_USE_MDRANGE=OFF \
     -DMG_USE_AVX512=OFF \
     -DMG_USE_AVX2=OFF \
     -DMG_USE_CUDA=OFF \
     -DMG_USE_HIP=ON \
+    -DCMAKE_BUILD_TYPE=Release \
      ${SRCDIR}/KokkosDslash
 
 
