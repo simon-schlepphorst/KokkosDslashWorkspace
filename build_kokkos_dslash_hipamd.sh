@@ -21,13 +21,16 @@ cd ./build_${PK_MODULE}
 
 cmake3 \
     -DCMAKE_CXX_COMPILER=hipcc \
+    -DCMAKE_CXX_FLAGS="-O3" \
+    -DCMAKE_CXX_STANDARD=14 \
+    -DKokkos_CXX_STANDARD=14 \
+    -DCMAKE_CXX_EXTENSIONS=OFF \
     -DKokkos_ENABLE_OPENMP=FALSE \
     -DKokkos_ENABLE_HIP=TRUE \
     -DKokkos_ENABLE_DEPRECATED_CODE=FALSE \
     -DKokkos_ENABLE_PROFILING=OFF \
     -DKokkos_ENABLE_SERIAL=ON \
-    -DKokkos_ARCH_GFX906=ON \
-    -DKokkos_ARCH_EPYC=ON \
+    -DKokkos_ARCH_VEGA906=ON \
     -DKokkos_ENABLE_COMPLEX_ALIGN=ON \
     -DCMAKE_ECLIPSE_MAKE_ARGUMENTS=-j8 \
     -DCMAKE_ECLIPSE_VERSION=4.5.0 \
@@ -39,8 +42,7 @@ cmake3 \
     -DMG_USE_AVX2=OFF \
     -DMG_USE_CUDA=OFF \
     -DMG_USE_HIP=ON \
-    -DCMAKE_BUILD_TYPE=Release \
      ${SRCDIR}/KokkosDslash
 
 
-${MAKE} -j 8
+${MAKE} VERBOSE=1 -j 8
