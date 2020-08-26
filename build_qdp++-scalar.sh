@@ -30,7 +30,7 @@ ${SRCDIR}/qdpxx/configure \
 	--enable-parallel-io \
         --enable-dml-output-buffering \
 	--with-libxml2=/usr \
-	CXXFLAGS="${PK_CXXFLAGS}" \
+	CXXFLAGS="${PK_CXXFLAGS} -Wno-dynamic-exception-spec" \
 	CFLAGS="${PK_CFLAGS}" \
 	CXX="${PK_CXX}" \
 	CC="${PK_CC}" \
