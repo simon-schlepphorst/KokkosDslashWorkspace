@@ -29,7 +29,7 @@ ${SRCDIR}/qdpxx/configure \
 	--enable-largefile \
 	--enable-parallel-io \
         --enable-dml-output-buffering \
-	--with-libxml2=/usr \
+	--with-libxml2=${INSTALLDIR}/libxml2 \
 	CXXFLAGS="${PK_CXXFLAGS} -Wno-dynamic-exception-spec" \
 	CFLAGS="${PK_CFLAGS}" \
 	CXX="${PK_CXX}" \
