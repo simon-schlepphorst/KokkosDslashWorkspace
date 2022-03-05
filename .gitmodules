@@ -1,10 +1,10 @@
 [submodule "src/cpp_wilson_dslash"]
 	path = src/cpp_wilson_dslash
-	url = ../../jeffersonlab/cpp_wilson_dslash.git
+	url = ../cpp_wilson_dslash.git
 	branch = devel
 [submodule "src/qdpxx"]
 	path = src/qdpxx
-	url = ../../usqcd-software/qdpxx.git
+	url = ../qdpxx.git
 	branch = devel
 [submodule "src/KokkosDslash"]
 	path = src/KokkosDslash
