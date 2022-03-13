@@ -29,10 +29,11 @@ C++ compiler in addition to the sources. A straighforward build
 for CPU OpenMP targets would involve:
 
 a) setting up the `env.sh` file with compiler specifics
+
 b) editing the `build_xxx.sh` scripts 
 
-The `build_all.sh` script will call in sequence the necessary
-builds for `libxml2`, followed by `qdpxx` followed by the mini-app.
+Then run in sequence the necessary builds for `libxml2`, followed by `qdpxx`
+followed by the mini-app.
 
 The env.sh file
 ---------------
