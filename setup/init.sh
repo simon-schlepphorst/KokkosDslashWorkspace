@@ -15,9 +15,10 @@ export SSHREMOTE="$2"
 
 # Commands to run:
 CMD='
-    REPO="$(basename $(git rev-parse --show-toplevel))"
-    ssh "$SSHREMOTE" "git init --bare ~/git-repos/$REPO.git"
-    git remote add "$GITREMOTE" "$SSHREMOTE:~/git-repos/$REPO.git"
+    USER="$(git config --get remote.origin.url | sed -n "s/.*[:\/]\(\S*\)\/.*$/\1/p")"
+    REPO="$(git config --get remote.origin.url | sed -n "s/.*\/\(\S*\)$/\1/p")"
+    ssh "$SSHREMOTE" "git init --bare ~/git-repos/$USER/$REPO"
+    git remote add "$GITREMOTE" "$SSHREMOTE:~/git-repos/$USER/$REPO"
     git push "$GITREMOTE" --all
     '
 # Main Repo:
