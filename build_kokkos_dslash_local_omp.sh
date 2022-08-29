@@ -30,4 +30,4 @@ cmake \
      ${SRCDIR}/KokkosDslash
 
 
-${MAKE} VERBOSE=1
+${MAKE}
