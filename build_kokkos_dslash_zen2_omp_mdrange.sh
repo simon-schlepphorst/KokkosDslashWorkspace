@@ -1,7 +1,7 @@
 #!/bin/bash
 
 source ./env.sh
-export PK_MODULE=kokkos_dslash_flat
+export PK_MODULE=kokkos_dslash_mdrange
 
 pushd ${BUILDDIR}
 if [ -d ./build_${PK_MODULE}  ];
@@ -25,8 +25,8 @@ cmake \
     -DKokkos_ENABLE_SERIAL=ON \
     -DKokkos_ARCH_ZEN2=ON \
     -DKokkos_ENABLE_COMPLEX_ALIGN=ON \
+    -DMG_KOKKOS_USE_MDRANGE=ON \
     -DMG_USE_AVX2=ON \
-    -DMG_FLAT_PARALLEL_DSLASH=ON \
     -DMG_DEFAULT_LOGLEVEL=DEBUG \
      ${SRCDIR}/KokkosDslash
 
