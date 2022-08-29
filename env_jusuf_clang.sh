@@ -4,8 +4,8 @@ module load Clang
 
 TOPDIR=`pwd`
 
-BUILDDIR=${TOPDIR}/build
-INSTALLDIR=${TOPDIR}/install
+BUILDDIR=${TOPDIR}/build/clang
+INSTALLDIR=${TOPDIR}/install/clang
 SRCDIR=${TOPDIR}/src
 
 mkdir -p ${BUILDDIR}

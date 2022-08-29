@@ -4,8 +4,8 @@ module load GCC
 
 TOPDIR=`pwd`
 
-BUILDDIR=${TOPDIR}/build
-INSTALLDIR=${TOPDIR}/install
+BUILDDIR=${TOPDIR}/build/gcc
+INSTALLDIR=${TOPDIR}/install/gcc
 SRCDIR=${TOPDIR}/src
 
 mkdir -p ${BUILDDIR}
