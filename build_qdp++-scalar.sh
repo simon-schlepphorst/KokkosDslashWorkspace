@@ -35,7 +35,7 @@ ${SRCDIR}/qdpxx/configure \
 	CXX="${PK_CXX}" \
 	CC="${PK_CC}" \
 	${PK_OMP_ENABLE} \
-	--host=aarch64-unknown-linux --build=none
+	--host="${PK_ARCH}" --build=none
 
 ${MAKE}
 ${MAKE} install

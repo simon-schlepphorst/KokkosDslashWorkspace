@@ -19,8 +19,8 @@ fi
 mkdir  ./build_libxml2
 cd ./build_libxml2
 
-${SRCDIR}/libxml2/configure --prefix=${INSTALLDIR}/libxml2 -host=aarch64-unknown-linux \
-    --build=aarch64-unknown-linux \
+${SRCDIR}/libxml2/configure --prefix=${INSTALLDIR}/libxml2 -host="${PK_ARCH}" \
+    --build="${PK_ARCH}" \
     CC="${PK_CC}" \
     CFLAGS="${PK_CFLAGS}" \
     --disable-shared \
