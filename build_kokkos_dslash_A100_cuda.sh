@@ -1,7 +1,7 @@
 #!/bin/bash
 
 source ./env.sh
-export PK_MODULE=kokkos_dslash_flat
+export PK_MODULE=kokkos_dslash_team
 
 NVCC_WRAPPER=${SRCDIR}/KokkosDslash/extern/kokkos/bin/nvcc_wrapper
 chmod u+x ${NVCC_WRAPPER}
@@ -29,7 +29,6 @@ cmake \
     -DKokkos_ARCH_AMPERE80=ON \
     -DCMAKE_CXX_FLAGS="${PK_CXXFLAGS_NVCC} -arch=sm_80" \
     -DCMAKE_EXE_LINKER_FLAGS="${PK_LDFLAGS}" \
-    -DMG_FLAT_PARALLEL_DSLASH=ON \
     -DMG_USE_AVX512=OFF \
     -DMG_USE_AVX2=OFF \
     -DMG_USE_CUDA=ON \
