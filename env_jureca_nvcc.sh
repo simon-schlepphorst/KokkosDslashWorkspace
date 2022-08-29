@@ -5,15 +5,13 @@ module load CUDA
 
 TOPDIR=`pwd`
 
-BUILDDIR=${TOPDIR}/build
-INSTALLDIR=${TOPDIR}/install
+BUILDDIR=${TOPDIR}/build/nvcc
+INSTALLDIR=${TOPDIR}/install/nvcc
 SRCDIR=${TOPDIR}/src
 
-#export CPLUS_INCLUDE_PATH=${TOPDIR}/install/qdp++-scalar/include:${TOPDIR}/src/qdpxx/other_libs/xpath_reader/include
-#export LIBRARY_PATH=${TOPDIR}/install/qdp++-scalar/lib
+mkdir -p ${BUILDDIR}
 
-#export PATH=$PATH:${TOPDIR}/install/libxml2/bin
-
+PK_ARCH="x86_64-unknown-linux"
 PK_CXX="g++"
 PK_CC="gcc"
 PK_OMP_ENABLE="--enable-openmp"
@@ -23,5 +21,4 @@ PK_CFLAGS="-g -O3 -std=gnu99 -fopenmp"
 PK_LDFLAGS="-fopenmp"
 PK_LIBS=""
 
-MAKE="make -j 8"
-
+MAKE="make -j 32"
