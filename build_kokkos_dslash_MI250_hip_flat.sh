@@ -1,7 +1,7 @@
 #!/bin/bash
 
 source ./env.sh
-export PK_MODULE=kokkos_dslash_team
+export PK_MODULE=kokkos_dslash_flat
 
 pushd ${BUILDDIR}
 if [ -d ./build_${PK_MODULE}  ];
@@ -27,6 +27,7 @@ cmake \
     -DKokkos_ENABLE_SERIAL=ON \
     -DKokkos_ARCH_ZEN3=ON \
     -DKokkos_ENABLE_COMPLEX_ALIGN=ON \
+    -DMG_FLAT_PARALLEL_DSLASH=ON \
     -DMG_USE_HIP=ON \
     -DMG_USE_AVX2=OFF \
     -DMG_DEFAULT_LOGLEVEL=DEBUG \
