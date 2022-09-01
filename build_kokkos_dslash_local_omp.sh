@@ -24,7 +24,7 @@ cmake \
     -DKokkos_ENABLE_SERIAL=ON \
     -DKokkos_ARCH_SNB=ON \
     -DKokkos_ENABLE_COMPLEX_ALIGN=ON \
-    -DMG_USE_AVX2=ON \
+    -DMG_USE_AVX2=OFF \
     -DMG_DEFAULT_LOGLEVEL=DEBUG \
     -DCMAKE_BUILD_TYPE=DEBUG \
      ${SRCDIR}/KokkosDslash
