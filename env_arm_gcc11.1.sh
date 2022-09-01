@@ -15,4 +15,4 @@ PK_CXXFLAGS=" -g -O3 -std=c++14 -fopenmp -march=native"
 PK_CFLAGS="-g -O3 -std=gnu99 -fopenmp"
 PK_LDFLAGS=""
 
-MAKE="make -j 8"
+MAKE="make -j 42 -i"

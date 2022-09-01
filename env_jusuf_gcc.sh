@@ -19,4 +19,4 @@ PK_CFLAGS="-g -O3 -std=gnu99 -fopenmp"
 PK_LDFLAGS=""
 PK_LIBS=""
 
-MAKE="make -j 32"
+MAKE="make -j 32 -i"

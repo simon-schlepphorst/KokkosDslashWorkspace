@@ -16,4 +16,4 @@ PK_CXXFLAGS="-g -O3 -std=c++14 -fopenmp -fopenmp=libomp -march=native"
 PK_CXXFLAGS_NVCC=${PK_CXXFLAGS}" --expt-extended-lambda --expt-relaxed-constexpr"
 PK_CFLAGS="-g -O3 -std=gnu99 -fopenmp -fopenmp=libomp" 
 
-MAKE="make -j 2"
+MAKE="make -j 2 -i"
