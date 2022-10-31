@@ -22,6 +22,7 @@ cmake \
     -DQDPXX_DIR="${INSTALLDIR}/qdp++-scalar/share" \
     -DCMAKE_CXX_COMPILER=${PK_CXX} \
     -DKokkos_ENABLE_HIP=ON \
+    -DKokkos_ENABLE_HIP_MULTIPLE_KERNEL_INSTANTIATIONS=ON \
     -DKokkos_ARCH_VEGA90A=ON \
     -DKokkos_ENABLE_OPENMP=ON \
     -DKokkos_ENABLE_SERIAL=ON \
