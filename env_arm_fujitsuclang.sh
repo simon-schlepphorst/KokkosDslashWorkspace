@@ -7,6 +7,8 @@ BUILDDIR=${TOPDIR}/build/clang
 INSTALLDIR=${TOPDIR}/install/clang
 SRCDIR=${TOPDIR}/src
 
+mkdir -p ${BUILDDIR}
+
 PK_ARCH="aarch64-unknown-linux"
 PK_CXX="FCC -Nclang"
 PK_CC="fcc -Nclang"

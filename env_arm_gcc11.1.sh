@@ -7,6 +7,8 @@ BUILDDIR=${TOPDIR}/build/gcc
 INSTALLDIR=${TOPDIR}/install/gcc
 SRCDIR=${TOPDIR}/src
 
+mkdir -p ${BUILDDIR}
+
 PK_ARCH="aarch64-unknown-linux"
 PK_CXX="g++"
 PK_CC="gcc"
