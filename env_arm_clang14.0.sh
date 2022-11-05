@@ -11,11 +11,11 @@ SRCDIR=${TOPDIR}/src
 mkdir -p ${BUILDDIR}
 
 PK_ARCH="aarch64-unknown-linux"
-PK_CXX="clang++"
-PK_CC="clang"
+PK_CXX="clang++ -stdlib=libc++"
+PK_CC="clang -stdlib=libc++"
 PK_OMP_ENABLE="--enable-openmp"
-PK_CXXFLAGS=" -g -O3 -std=c++14 -fopenmp -march=native"
-PK_CFLAGS="-g -O3 -std=gnu99 -fopenmp"
+PK_CXXFLAGS=" -g -O3 -std=c++14 -fopenmp -fopenmp=libomp -march=native"
+PK_CFLAGS="-g -O3 -std=gnu99 -fopenmp -fopenmp=libomp"
 PK_LDFLAGS=""
 
 MAKE="make -j 42 -i"
