@@ -13,9 +13,9 @@ fi
 mkdir  ./build_${PK_MODULE}
 cd ./build_${PK_MODULE}
 
+export CXX="${PK_CXX}"
 
 cmake \
-    -DCMAKE_CXX_COMPILER="${PK_CXX}" \
     -DKokkos_ENABLE_OPENMP=ON \
     -DKokkos_ENABLE_SERIAL=ON \
     -DKokkos_ENABLE_COMPLEX_ALIGN=ON \
