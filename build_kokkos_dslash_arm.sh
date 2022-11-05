@@ -15,7 +15,7 @@ cd ./build_${PK_MODULE}
 
 
 cmake \
-    -DCMAKE_CXX_COMPILER=${PK_CXX} \
+    -DCMAKE_CXX_COMPILER="${PK_CXX}" \
     -DKokkos_ENABLE_OPENMP=ON \
     -DKokkos_ENABLE_SERIAL=ON \
     -DKokkos_ENABLE_COMPLEX_ALIGN=ON \
