@@ -1,7 +1,7 @@
 #!/bin/bash
 
 source ./env.sh
-export PK_MODULE=kokkos_dslash
+export PK_MODULE=kokkos_dslash_flat
 
 
 pushd ${BUILDDIR}
